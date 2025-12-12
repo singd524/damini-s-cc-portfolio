@@ -312,7 +312,7 @@ a:hover {
     border: 3px solid var(--text-color); /* border using dark text color */
     box-shadow: 4px 4px 0 var(--bg-dark); /* small shadow using pastel bar color */
 }
-/* SPARKLE ANIMATION KEYFRAMES*/
+/* --- SPARKLE ANIMATION KEYFRAMES --- */
 @keyframes sparkle-sweep {
     /* Starts at a rotated position */
     0% {
