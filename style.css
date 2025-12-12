@@ -114,11 +114,25 @@ a:hover {
 }
 
 /* WINDOW CARD STYLING (retro) */
+/* --- 5. Window/Card Styling (The core retro look) --- */
 .window-card {
     background: var(--window-bg);
     border: 3px solid var(--border-color);
-    box-shadow: 6px 6px 0 var(--bg-dark); /* shadow uses soft blue */
+    
+    /* *** CHANGES MADE HERE FOR DRAMATIC FLOAT EFFECT *** */
+    /* Increased offset (10px 10px) and used the dark text color for contrast */
+    box-shadow: 10px 10px 0 var(--text-color); 
+    
     margin-bottom: 60px;
+    position: relative; 
+    z-index: 20; /* Increased Z-index to ensure it sits clearly on top */
+}
+
+/* Also ensure your profile photo border uses the dark color for contrast */
+.profile-photo {
+    /* ... other styles ... */
+    border: 3px solid var(--text-color); /* Ensure dark border is used */
+    box-shadow: 4px 4px 0 var(--bg-dark); 
 }
 
 .welcome-window {
@@ -183,6 +197,9 @@ a:hover {
     margin-bottom: 40px;
     border-top: 3px solid #808080;
     border-bottom: 3px solid #808080;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    z-index: 5;
 }
 
 .social-icon {
@@ -227,12 +244,33 @@ a:hover {
     padding: 15px;
     transition: background 0.1s;
     border-radius: 5px;
-    box-shadow: 2px 2px 0 var(--bg-dark);
-    text-align: left; /* ensure text inside cards is left-aligned */
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1); 
+    text-align: left; 
+    
+    /* NECESSARY FOR SPARKLE POSITIONING */
+    position: relative; 
+    overflow: hidden; /* Keeps sparkles inside the card */
+}
+
+/* * 1. SPARKLE TRIGGER: When hovering over the card, the sparkle pseudo-element appears 
+ */
+.card:hover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* Gradient defines the light "sparkle" streak */
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+    
+    /* Start the animation */
+    animation: sparkle-sweep 1.5s linear infinite;
+    opacity: 0.8;
 }
 
 .card:hover {
-    background: #f0f4ff; /* subtle hover color */
+    background: #f0f4ff; /* Very subtle hover color (keep this) */
     color: var(--text-color);
     transform: none; 
 }
@@ -273,4 +311,22 @@ a:hover {
     /* RETRO EFFECTS */
     border: 3px solid var(--text-color); /* border using dark text color */
     box-shadow: 4px 4px 0 var(--bg-dark); /* small shadow using pastel bar color */
+}
+/* SPARKLE ANIMATION KEYFRAMES*/
+@keyframes sparkle-sweep {
+    /* Starts at a rotated position */
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.5;
+    }
+    /* Moves the light streak across the card */
+    50% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    /* Resets the rotation for the next loop */
+    100% {
+        transform: rotate(360deg);
+        opacity: 0.5;
+    }
 }
