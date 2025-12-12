@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="desktop-bg">
+    <header class="top-bar"></header>
+
+    <main class="main-content">
+        <div class="window-card content-window project-page">
+            <div class="window-header">
+                <span class="title">C:\p5js-projects\face_generator.exe</span> 
+                <a href="index.html" class="close-btn">×</a > 
+            </div>
+            
+            <div class="window-body">
+                <h1>Assignment #2 — Face Generator</h1> 
+                
+                <iframe 
+                    src="https://editor.p5js.org/singd524/full/q7YzGMGS6"
+                    title="Live p5.js Sketch: Face Generator"
+                    frameborder="0"
+                    width="100%" height="500">
+                </iframe>
+
+                <h2>Project Overview</h2>
+                <p>
+                    This assignment was a challenge in balancing randomness and control. The goal was to use procedural generation to create purposeful, evolving forms, ensuring slight adjustments to variables created deliberate variations rather than chaos. The sketch uses the random generate function to vary the shapes, sizes, and colors of the facial components every time the user clicks play.
+                </p>
+
+                <h2>Technical Details</h2>
+                <div class="section-card">
+                    <ul>
+                        <li>Procedural Generation: Incorporated the `random()` function** throughout the sketch to control the size, color, and position of individual facial features, ensuring high variation upon each play.</li>
+                        <li>Interactive Control: Used the **`mousePressed()` function** to trigger the generation of a new, unique face, balancing the sketch's internal randomness with direct user input.</li>
+                        <li>Custom Features: Created custom functions to draw modular facial elements (eyes, nose, mouth), allowing those functions to accept different parameters (variables) for scale and color to manage the procedural output.</li>
+                        <li>GitHub Repository: <a href="https://github.com/singd524/damini-s-cc-portfolio">Link to Project Code</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimental Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="desktop-bg">
+    <header class="top-bar"></header>
+
+    <main class="main-content">
+        <div class="window-card content-window project-page">
+            <div class="window-header">
+                <span class="title">C:\p5js-projects\mood_scape.exe</span> 
+                <a href="index.html" class="close-btn">×</a > 
+            </div>
+            
+            <div class="window-body">
+                <h1>Assignment #3 — Experimental Clock (MoodScape)</h1> 
+                
+                <iframe 
+                    src="https://editor.p5js.org/singd524/full/HwYsraudp"
+                    title="Live p5.js Sketch: Experimental Clock"
+                    frameborder="0"
+                    width="100%" height="500">
+                </iframe>
+
+                <h2>Project Overview</h2>
+                <p>
+                    Moodscape tells time in an abstract form through color and motion instead of numbers. It reflects how time is experienced emotionally: slow when calm, fast and chaotic when anxious, and playful when happy. Each part of the day is represented by a different color/emotion, such as blue in the morning, yellow for happiness at noon, and alarming red at night. This project helped me rethink how time can reflect feelings and states of mind.
+                </p>
+
+                <h2>Technical Details</h2>
+                <div class="section-card">
+                    <ul>
+                        <li>Time Data Access: Used p5.js functions like `hour()` and `minute()` to retrieve the computer's current time, which drives the color and motion changes of the MoodScape.</li>
+                        <li>Value Mapping: Implemented the `map()` function to translate continuous time values (e.g., minutes 0–59) into visual properties, such as controlling the speed of motion or the brightness of a color component.</li>
+                        <li>Cyclic Movement: Applied trigonometry (sine/cosine), coupled with `translate()` and `rotate()`, to generate the subtle, circular movements that visually express the passing time.</li>
+                        <li>GitHub Repository: <a href="https://github.com/singd524/damini-s-cc-portfolio">Link to Project Code</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
